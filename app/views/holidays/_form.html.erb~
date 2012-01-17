@@ -1,0 +1,17 @@
+<% form_for @holiday do |h| %>
+
+<p>
+  <%= h.label :userid %><br />
+  <%= h.text_field :userid %>
+</p>
+
+<p>
+  <%= h.label :name %><br />
+  <%= h.text_area :name %>
+</p>
+
+<p>
+  <%= h.submit "Save Holiday" %> | <%= link_to "Return to holidays", @holiday %>
+</p>
+
+<% end %>

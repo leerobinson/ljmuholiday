@@ -1,0 +1,411 @@
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (142.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (54.1ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateHolidays (20120117140248)
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "holidays" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "userid" varchar(255), "name" varchar(255), "amountofdays" integer, "startdate" date, "enddate" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120117140248')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("holidays")[0m
+  [4;36;1mHoliday Create (0.4ms)[0m   [0;1mINSERT INTO "holidays" ("name", "created_at", "enddate", "updated_at", "userid", "amountofdays", "startdate") VALUES('Lee Robinson', '2012-01-17 14:19:49', NULL, '2012-01-17 14:19:49', '416495', 5, NULL)[0m
+  [4;35;1mHoliday Create (0.3ms)[0m   [0mINSERT INTO "holidays" ("name", "created_at", "enddate", "updated_at", "userid", "amountofdays", "startdate") VALUES('Lee Robinson', '2012-01-17 14:20:33', 0, '2012-01-17 14:20:33', '416495', 5, 0)[0m
+  [4;36;1mHoliday Create (0.2ms)[0m   [0;1mINSERT INTO "holidays" ("name", "created_at", "enddate", "updated_at", "userid", "amountofdays", "startdate") VALUES('Lee Robinson', '2012-01-17 14:22:56', '2012-01-20', '2012-01-17 14:22:56', '416495', 5, '2012-01-15')[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-01-17 14:32:19) [GET]
+
+ActionController::RoutingError (No route matches "/recipes/show" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-01-17 14:32:30) [GET]
+
+ActionController::RoutingError (No route matches "/recipes/show/1" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-17 14:32:38) [GET]
+  Parameters: {"id"=>"1"}
+Rendering holidays/show
+Completed in 60ms (View: 59, DB: 0) | 200 OK [http://localhost/holidays/show/1]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-17 14:38:54) [GET]
+  Parameters: {"id"=>"1"}
+Rendering holidays/show
+
+ActionView::TemplateError (undefined method `userid' for nil:NilClass) on line #1 of app/views/holidays/show.html.erb:
+1: <h1><%=h @holiday.userid %></h1>
+2: <p>they are going on this date</p>
+3: <p><%=h @holiday.startdate %></p>
+
+    app/views/holidays/show.html.erb:1
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.1ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-17 14:40:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mHoliday Load (0.1ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 1) [0m
+Rendering holidays/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/holidays/show/1]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-17 14:41:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 1) [0m
+Rendering holidays/show
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/holidays/show/1]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-17 14:41:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 1) [0m
+Rendering holidays/show
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/holidays/show/1]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-17 14:43:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 1) [0m
+Rendering holidays/show
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/holidays/show/1]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-17 14:55:23) [GET]
+  [4;36;1mHoliday Load (0.4ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering holidays/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-17 15:00:34) [GET]
+  [4;35;1mHoliday Load (0.5ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering holidays/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #3 of app/views/holidays/index.html.erb:
+1: <h1>Holiday List</h1>
+2: <ul>
+3:     <% @holidays.each do |holiday| %>
+4:     <li> <%= link_to holiday.userid, holiday %> </li>
+5:     <% end %>
+6: </ul>
+
+    app/views/holidays/index.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (86.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-17 15:00:44) [GET]
+  [4;36;1mHoliday Load (0.3ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering holidays/index
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-17 15:00:58) [GET]
+  [4;35;1mHoliday Load (0.4ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering holidays/index
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-17 15:01:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 1) [0m
+Rendering holidays/show
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/holidays/1]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-17 15:01:09) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 2) [0m
+Rendering holidays/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/holidays/2]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-17 15:01:10) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mHoliday Load (0.1ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 3) [0m
+Rendering holidays/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/holidays/3]
+  [4;36;1mHoliday Create (0.4ms)[0m   [0;1mINSERT INTO "holidays" ("name", "created_at", "enddate", "updated_at", "userid", "amountofdays", "startdate") VALUES('Tom Elsworthy', '2012-01-17 15:04:17', '2012-03-07', '2012-01-17 15:04:17', '397346', 6, '2012-03-01')[0m
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-17 15:04:43) [GET]
+  [4;36;1mHoliday Load (0.7ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering holidays/index
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-17 15:24:29) [GET]
+  [4;35;1mHoliday Load (0.5ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering holidays/index
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing HolidaysController#new (for 127.0.0.1 at 2012-01-17 15:24:30) [GET]
+Rendering holidays/new
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/holidays/new]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-17 15:32:22) [GET]
+  [4;36;1mHoliday Load (0.5ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering holidays/index
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing HolidaysController#new (for 127.0.0.1 at 2012-01-17 15:54:06) [GET]
+Rendering holidays/new
+Rendered holidays/_form (11.5ms)
+Completed in 23ms (View: 20, DB: 0) | 200 OK [http://localhost/holidays/new]
+
+
+Processing HolidaysController#new (for 127.0.0.1 at 2012-01-17 15:55:10) [GET]
+Rendering holidays/new
+Rendered holidays/_form (9.4ms)
+Completed in 19ms (View: 14, DB: 0) | 200 OK [http://localhost/holidays/new]
+
+
+Processing HolidaysController#create (for 127.0.0.1 at 2012-01-17 15:55:28) [POST]
+  Parameters: {"commit"=>"Save Holiday", "authenticity_token"=>"5wIDbfQK1F2mU+bVzreC2z3kJ2zjY3t10g1Ncj6wLWA=", "holiday"=>{"name"=>"Jonah Lomu", "enddate"=>"28/03/2012", "amountofdays"=>"5", "userid"=>"458976", "startdate"=>"23/03/2012"}}
+
+ActionController::UnknownAction (No action responded to create. Actions: destroy, edit, index, new, and show):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing HolidaysController#new (for 127.0.0.1 at 2012-01-17 15:56:23) [GET]
+Rendering holidays/new
+Rendered holidays/_form (7.5ms)
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/holidays/new]
+
+
+Processing HolidaysController#create (for 127.0.0.1 at 2012-01-17 15:56:25) [POST]
+  Parameters: {"commit"=>"Save Holiday", "authenticity_token"=>"5wIDbfQK1F2mU+bVzreC2z3kJ2zjY3t10g1Ncj6wLWA=", "holiday"=>{"name"=>"Jonah Lomu", "enddate"=>"28/03/2012", "amountofdays"=>"5", "userid"=>"458976", "startdate"=>"23/03/2012"}}
+  [4;35;1mHoliday Create (0.4ms)[0m   [0mINSERT INTO "holidays" ("name", "created_at", "enddate", "updated_at", "userid", "amountofdays", "startdate") VALUES('Jonah Lomu', '2012-01-17 15:56:25', NULL, '2012-01-17 15:56:25', '458976', 5, NULL)[0m
+Redirected to http://localhost:3000/
+Completed in 93ms (DB: 0) | 302 Found [http://localhost/holidays]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-17 15:56:25) [GET]
+  [4;36;1mHoliday Load (0.6ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering holidays/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-17 15:56:26) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 5) [0m
+Rendering holidays/show
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/holidays/5]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-17 15:56:38) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 4) [0m
+Rendering holidays/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/holidays/4]
+
+
+Processing HolidaysController#new (for 127.0.0.1 at 2012-01-17 15:56:39) [GET]
+Rendering holidays/new
+Rendered holidays/_form (6.2ms)
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/holidays/new]
+
+
+Processing HolidaysController#create (for 127.0.0.1 at 2012-01-17 15:57:00) [POST]
+  Parameters: {"commit"=>"Save Holiday", "authenticity_token"=>"5wIDbfQK1F2mU+bVzreC2z3kJ2zjY3t10g1Ncj6wLWA=", "holiday"=>{"name"=>"Lewis Strong", "enddate"=>"30/04/2012", "amountofdays"=>"10", "userid"=>"894561", "startdate"=>"20/04/2012"}}
+  [4;35;1mHoliday Create (0.2ms)[0m   [0mINSERT INTO "holidays" ("name", "created_at", "enddate", "updated_at", "userid", "amountofdays", "startdate") VALUES('Lewis Strong', '2012-01-17 15:57:00', NULL, '2012-01-17 15:57:00', '894561', 10, NULL)[0m
+Redirected to http://localhost:3000/
+Completed in 85ms (DB: 0) | 302 Found [http://localhost/holidays]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-17 15:57:00) [GET]
+  [4;36;1mHoliday Load (0.4ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering holidays/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-17 16:01:00) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mHoliday Load (0.1ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 6) [0m
+Rendering holidays/show
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/holidays/6]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-17 16:08:15) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mHoliday Load (0.1ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 5) [0m
+Rendering holidays/show
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/holidays/5]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-17 16:08:56) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 5) [0m
+Rendering holidays/show
+Completed in 51ms (View: 6, DB: 0) | 200 OK [http://localhost/holidays/5]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-17 16:09:07) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mHoliday Load (0.1ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 5) [0m
+Rendering holidays/show
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/holidays/5]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-17 16:09:09) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 5) [0m
+Rendering holidays/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/holidays/5]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-17 16:09:30) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mHoliday Load (0.1ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 5) [0m
+Rendering holidays/show
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/holidays/5]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-17 16:10:55) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mHoliday Load (0.1ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 6) [0m
+Rendering holidays/show
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/holidays/6]
+
+
+Processing HolidaysController#edit (for 127.0.0.1 at 2012-01-17 16:10:56) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 6) [0m
+Rendering holidays/edit
+Rendered holidays/_form (6.3ms)
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/holidays/6/edit]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-17 16:15:05) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 6) [0m
+Rendering holidays/show
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/holidays/6]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-17 16:15:06) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 6) [0m
+Rendering holidays/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/holidays/6]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-17 16:15:07) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 6) [0m
+Rendering holidays/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/holidays/6]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-17 16:15:09) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 6) [0m
+Rendering holidays/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/holidays/6]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-17 16:15:09) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 6) [0m
+Rendering holidays/show
+Completed in 8ms (View: 3, DB: 0) | 200 OK [http://localhost/holidays/6]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-17 16:15:17) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mHoliday Load (0.1ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 6) [0m
+Rendering holidays/show
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/holidays/6]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-17 16:15:18) [GET]
+  [4;35;1mHoliday Load (0.5ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering holidays/index
+Completed in 9ms (View: 5, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-17 16:16:06) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mHoliday Load (0.1ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 6) [0m
+Rendering holidays/show
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/holidays/6]

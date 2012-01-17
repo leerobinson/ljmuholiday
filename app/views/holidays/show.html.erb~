@@ -1,0 +1,8 @@
+<h1><%=h @holiday.userid %></h1>
+<p>they are going on this date</p>
+<p><%=h @holiday.name %></p>
+<p><%=h @holiday.amountofdays %></p>
+<p><%=h @holiday.startdate %></p>
+<p><%=h @holiday.enddate %></p>
+
+<%= link_to "edit holiday request", edit_holiday_path %> | <%= link_to "back", holiday_path %>

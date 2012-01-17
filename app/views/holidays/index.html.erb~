@@ -1,0 +1,7 @@
+<h1>Holiday List</h1>
+<ul>
+    <% @holiday.each do |holiday| %>
+    <li> <%= link_to holiday.name, holiday %> </li>
+    <% end %>
+</ul>
+

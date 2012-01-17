@@ -1,0 +1,32 @@
+<% form_for @holiday do |h| %>
+
+<p>
+  <%= h.label :userid %><br />
+  <%= h.text_field :userid %>
+</p>
+
+<p>
+  <%= h.label :name %><br />
+  <%= h.text_field :name %>
+</p>
+
+<p>
+  <%= h.label :amountofdays %><br />
+  <%= h.text_field :amountofdays %>
+</p>
+
+<p>
+  <%= h.label :startdate %><br />
+  <%= h.text_field :startdate %>
+</p>
+
+<p>
+  <%= h.label :enddate %><br />
+  <%= h.text_field :enddate %>
+</p>
+
+<p>
+  <%= h.submit "Save Holiday" %> | <%= link_to "Return to holidays", @holiday %>
+</p>
+
+<% end %>
