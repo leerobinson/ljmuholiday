@@ -1,0 +1,147 @@
+@charset "utf-8";
+/* CSS Document */
+/* Styles for div ids */
+
+
+#container {
+	width: 968px;
+	overflow: hidden;
+	margin: 0 auto;
+	background-color: #dde8ef;
+}
+
+#header {
+	height: 125px;
+	width: 968px;
+}
+
+#footer {
+	width: 968px;
+	text-align: left;
+	padding-top: 10px;
+	clear:both;
+	
+}
+
+#footer img {
+	float: right;
+}
+
+#leftcolumn, #maincolumn, #rightcolumn {
+	float: left;
+	
+}
+
+#leftcolumn, #rightcolumn {
+	width: 224px;
+	position:relative;
+}
+
+#leftcolumn img {
+	position: absolute;
+	left: 20px;
+	margin-top: 50px;
+}
+
+#rightcolumn img {
+	margin-left: 15px;	
+	margin-bottom: 15px;
+	float: left;
+	display: block;
+}
+
+
+#maincolumn {
+	width:520px;
+	text-align:center;
+}
+
+/* Styles for the HTML Tags*/
+
+body {
+	font-family: "Trebuchet MS", Arial, Helvetica,sans-serif;
+	color: #1980cb;
+	background-color: #FAFAFA;
+}
+
+table, thead {
+	border-style:solid;
+}
+
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
+  }
+
+th {
+	background-color: #184676;
+	color:white;
+}
+
+a img {
+	border:none;
+}
+
+/* Styles for div classes */
+
+.navigation {
+	font-weight: bold;
+	font-size: 18px;
+	width: 968px;
+	height: 40px;
+	background-color: #184676;
+}
+
+.navigation ul {
+	padding: 10px 0 7px 0;
+	margin: 0;
+	text-align: center;
+}
+
+.navigation ul li {
+	display: inline;
+}
+
+.navigation ul li a {
+	color: #1980cb;
+	padding: 6px 3px 4px 3px;
+	margin-right: 20px; 
+	text-decoration: none;
+}
+
+.navigation ul li a:hover{
+	background-color: #ededed;
+	color: #1980cb;
+}
+
+.contactinfo {
+	text-align: center;
+	margin-top: 270px;
+	width: 200px;
+}
+
+.contactinfo li {
+  	display:inline;
+ }
+ 
+.socialnetwork {
+	margin-left:20px;
+	text-align: center;
+	margin-top: 20px;
+	width: 200px;
+}
+
+.snimages {
+	width: 150px;
+	margin-top:100px;
+	margin-left: 35px;
+}
+
+.form {
+	text-align: center;
+}
+.flash {
+  width: 100%;
+  border: 2px solid black;
+  background-color:#FFFFFF;
+}

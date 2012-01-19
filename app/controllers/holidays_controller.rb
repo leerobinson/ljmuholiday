@@ -18,14 +18,20 @@ class HolidaysController < ApplicationController
   def destroy
     @holiday = Holiday.find(params[:id])
     @holiday.destroy
-    redirect_to holiday_path
+    redirect_to root_url
   end
   
   def create
     @holiday = Holiday.create(params[:holiday])
+    if @holiday.save
     flash[:notice] = "New Holiday Created"
     redirect_to root_url
-  end
+    else
+    flash[:notice] = "Didn't create holiday"
+    redirect_to root_url
+    end
+    end
+    
   
   def update
     @holiday = Holiday.find(params[:id])
