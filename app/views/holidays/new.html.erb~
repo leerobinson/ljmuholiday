@@ -1,4 +1,4 @@
-<h1>New Holiday Request</h1>
+<title>LJMU Holiday Request System2</title>
 
 <%= render :partial => 'form' %>
 

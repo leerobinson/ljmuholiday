@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>LJMU Holiday Request System</title>
+<title>Holiday Request Record - LJMU</title>
 </head>
 
 <body>
@@ -27,15 +27,15 @@
     </div>
  
 <div id="maincolumn"><br><br>
-  
-<h1><%=h @holiday.userid %></h1>
+
+<h1>Individual request for <%=h @holiday.name %></h1>
 <p>they are going on this date</p>
-<p><%=h @holiday.name %></p>
+<p>User ID:<%=h @holiday.userid %></p>
 <p><%=h @holiday.amountofdays %></p>
 <p><%=h @holiday.startdate %></p>
 <p><%=h @holiday.enddate %></p>
 
-<p><%= link_to "Edit Holiday", edit_holiday_path %> | <%= link_to "back", holidays_path %></p><br>
+<p><%= link_to "Edit Holiday", edit_holiday_path %> | <%= link_to "Return to Holiday Index", holidays_path %></p><br>
 <p><%= link_to "Delete Holiday", @holiday,:confirm => "Confirming holiday request deletion?", :method => :delete %></p>
 
 </div>
