@@ -11335,6 +11335,7 @@ ActionController::UnknownAction (No action responded to images. Actions: create,
   /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
 
 Rendering rescues/layout (not_found)
+<<<<<<< HEAD
 
 
 Processing HolidaysController#index (for 127.0.0.1 at 2012-01-23 11:12:54) [GET]
@@ -13857,3 +13858,5 @@ Processing HolidaysController#index (for 127.0.0.1 at 2012-01-23 12:30:05) [GET]
 Rendering template within layouts/application
 Rendering holidays/index
 Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+=======
+>>>>>>> 61b0389915bba759c429e435c2391c375f59e7ca
