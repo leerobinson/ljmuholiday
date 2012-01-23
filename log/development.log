@@ -13860,3 +13860,135 @@ Rendering holidays/index
 Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/]
 =======
 >>>>>>> 61b0389915bba759c429e435c2391c375f59e7ca
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-23 12:44:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mHoliday Load (0.9ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+Completed in 28ms (View: 18, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-23 12:44:10) [GET]
+  Parameters: {"action"=>"show", "id"=>"9", "controller"=>"holidays"}
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 9) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://localhost/holidays/9]
+
+
+Processing HolidaysController#images to png (for 127.0.0.1 at 2012-01-23 12:44:10) [GET]
+  Parameters: {"format"=>"png", "action"=>"images", "id"=>"LJMU", "controller"=>"holidays"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, current_user, destroy, edit, index, logged_in?, login_required, new, redirect_to_target_or_default, show, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing HolidaysController#images to png (for 127.0.0.1 at 2012-01-23 12:44:10) [GET]
+  Parameters: {"format"=>"png", "action"=>"images", "id"=>"ljmuheader", "controller"=>"holidays"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, current_user, destroy, edit, index, logged_in?, login_required, new, redirect_to_target_or_default, show, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing HolidaysController#images to png (for 127.0.0.1 at 2012-01-23 12:44:10) [GET]
+  Parameters: {"format"=>"png", "action"=>"images", "id"=>"LJMU1", "controller"=>"holidays"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, current_user, destroy, edit, index, logged_in?, login_required, new, redirect_to_target_or_default, show, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing HolidaysController#images to png (for 127.0.0.1 at 2012-01-23 12:44:10) [GET]
+  Parameters: {"format"=>"png", "action"=>"images", "id"=>"youtube", "controller"=>"holidays"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, current_user, destroy, edit, index, logged_in?, login_required, new, redirect_to_target_or_default, show, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing HolidaysController#images to png (for 127.0.0.1 at 2012-01-23 12:44:10) [GET]
+  Parameters: {"format"=>"png", "action"=>"images", "id"=>"facebook", "controller"=>"holidays"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, current_user, destroy, edit, index, logged_in?, login_required, new, redirect_to_target_or_default, show, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing HolidaysController#images to png (for 127.0.0.1 at 2012-01-23 12:44:10) [GET]
+  Parameters: {"format"=>"png", "action"=>"images", "id"=>"twitter", "controller"=>"holidays"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, current_user, destroy, edit, index, logged_in?, login_required, new, redirect_to_target_or_default, show, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-23 12:44:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mHoliday Load (0.7ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+Completed in 11ms (View: 5, DB: 1) | 200 OK [http://localhost/holidays]
