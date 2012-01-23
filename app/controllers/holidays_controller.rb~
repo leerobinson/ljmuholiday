@@ -23,11 +23,14 @@ class HolidaysController < ApplicationController
   
   def create
     @holiday = Holiday.create(params[:holiday])
+    @holiday.user_id = current_user.id
     if @holiday.save
     flash[:notice] = "New Holiday Created"
     redirect_to root_url
     else
-    r
+    flash[:notice] = "Didn't create holiday"
+    redirect_to root_url
+    end
     end
     
   
