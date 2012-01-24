@@ -9,16 +9,6 @@
 
   <div id="header"><img src="images/ljmuheader.png" width="968" height="125" alt="LJMUHeader" title="LJMU Holiday Request System header"></div>
   
-  <div class="navigation">
-	<ul>
-	<li><a title= "Home page of LJMU holiday requests" href="index.html" accesskey="i">Home</a></li>
-	<li><a title = "List of holiday requests" href="requests.html" accesskey="r">Requests</a></li>
-	<li><a title  = "Add a new holiday request to the system" href="new.html" accesskey="n">Add Request</a></li>
-	<li><a title = "Edit a holiday request" href="edit.html" accesskey="e">Edit Request</a></li>
-	<li><a title = "Show an individual request of the system" href="show.html" accesskey="s">Show Request</a></li>
-	</ul>
-  </div>
-  
   <div id="leftcolumn"><img src="images/LJMU.png" width="165" height="165" alt="LJMULogo" title="LJMU Logo">
   <div class="contactinfo"><h1>LJMU Contact Information</h1>
 	<p>Telephone Number: 0151 231 2121</p>
@@ -26,6 +16,10 @@
     </div>
 
 <div id="maincolumn"><br><br>
+
+<% if current_user.id != @holiday.user.id %>
+<%= redirect_to holidays_path %>
+<% end %>
 
 <h1>Holiday Details</h1>
 
