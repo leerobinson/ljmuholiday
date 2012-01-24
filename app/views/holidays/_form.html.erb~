@@ -7,9 +7,9 @@
 <body>
 <div id="container">
 
-  <div id="header"><img src="images/ljmuheader.png" width="968" height="125" alt="LJMUHeader" title="LJMU Holiday Request System header"></div>
+  <div id="header"><img src="http://localhost:3000/images/ljmuheader.png" width="968" height="125" alt="LJMUHeader" title="LJMU Holiday Request System header"></div>
   
-  <div id="leftcolumn"><img src="images/LJMU.png" width="165" height="165" alt="LJMULogo" title="LJMU Logo">
+  <div id="leftcolumn"><img src="http://localhost:3000/images/LJMU.png" width="165" height="165" alt="LJMULogo" title="LJMU Logo">
   <div class="contactinfo"><h1>LJMU Contact Information</h1>
 	<p>Telephone Number: 0151 231 2121</p>
 	<p>Other contact information is available on the <a title ="LJMU Contact Information" href="http://www.ljmu.ac.uk/help.htm">LJMU</a> website</p></div>
@@ -17,9 +17,6 @@
 
 <div id="maincolumn"><br><br>
 
-<% if current_user.id != @holiday.user.id %>
-<%= redirect_to holidays_path %>
-<% end %>
 
 <h1>Holiday Details</h1>
 
@@ -32,7 +29,7 @@
 
 <p>
   <%= h.label :name, "Staff Name" %><br />
-  <%= h.text_field :name %>
+  <%= h.text_field :name, :value => current_user.username, :disabled => true %>
 </p>
 
 <p>
@@ -61,10 +58,10 @@
 <div id="rightcolumn"> 
   
   <div class="snimages">
-  <a href="http://www.ljmu.ac.uk/staff"><img src="images/LJMU1.png" width="55" height="55" alt="LJMUSocialNetwork" title="LJMU Staff"></a>
-    <a href="http://www.youtube.com/LJMUTV"><img src="images/youtube.png" width="55" height="55" alt="YoutubeSocialNetwork" title="LJMU YouTube"></a>
-    <a href="http://www.facebook.com/liverpooljohnmooresuniversity"><img src="images/facebook.png" width="55" height="55" alt="FacebookSocialNetwork" title="LJMU Facebook"></a>
-    <a href="http://twitter.com/#!/ljmu"><img src="images/twitter.png" width="55" height="55" alt="TwitterSocialNetwork" title="LJMU Twitter"></a>
+  <a href="http://www.ljmu.ac.uk/staff"><img src="http://localhost:3000/images/LJMU1.png" width="55" height="55" alt="LJMUSocialNetwork" title="LJMU Staff"></a>
+    <a href="http://www.youtube.com/LJMUTV"><img src="http://localhost:3000/images/youtube.png" width="55" height="55" alt="YoutubeSocialNetwork" title="LJMU YouTube"></a>
+    <a href="http://www.facebook.com/liverpooljohnmooresuniversity"><img src="http://localhost:3000/images/facebook.png" width="55" height="55" alt="FacebookSocialNetwork" title="LJMU Facebook"></a>
+    <a href="http://twitter.com/#!/ljmu"><img src="http://localhost:3000/images/twitter.png" width="55" height="55" alt="TwitterSocialNetwork" title="LJMU Twitter"></a>
 	</div>
     
   <div class="socialnetwork">
