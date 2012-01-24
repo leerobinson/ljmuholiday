@@ -1,24 +1,29 @@
 class HolidaysController < ApplicationController
   def index
+    login_required
     @holiday = Holiday.all
   end
 
   def show
+    login_required
     @holiday = Holiday.find(params[:id])
   end
 
   def new
+    login_required
     @holiday = Holiday.new 
   end
 
   def edit
+    login_required
     @holiday = Holiday.find(params[:id])
   end
   
   def destroy
+    login_required
     @holiday = Holiday.find(params[:id])
     @holiday.destroy
-    redirect_to root_url
+    redirect_to holidays_path
   end
   
   def create
@@ -26,10 +31,10 @@ class HolidaysController < ApplicationController
     @holiday.user_id = current_user.id
     if @holiday.save
     flash[:notice] = "New Holiday Created"
-    redirect_to root_url
+    redirect_to holidays_path
     else
     flash[:notice] = "Didn't create holiday"
-    redirect_to root_url
+    redirect_to holidays_path
     end
     end
     

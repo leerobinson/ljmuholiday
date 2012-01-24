@@ -8,7 +8,7 @@ ActionController::Routing::Routes.draw do |map|
 
   
   map.resources :holidays
-  map.root :controller => "holidays"
+  map.root :controller => "sessions", :action => 'new'
   
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

@@ -10,29 +10,25 @@
 
   <div id="header"><img src="images/ljmuheader.png" width="968" height="125" alt="LJMUHeader" title="LJMU Holiday Request System header"></div>
   
-  <div class="navigation">
-	<ul>
-	<li><a title= "Home page of LJMU holiday requests" href="index.html" accesskey="i">Home</a></li>
-	<li><a title = "List of holiday requests" href="requests.html" accesskey="r">Requests</a></li>
-	<li><a title  = "Add a new holiday request to the system" href="new.html" accesskey="n">Add Request</a></li>
-	<li><a title = "Edit a holiday request" href="edit.html" accesskey="e">Edit Request</a></li>
-	<li><a title = "Show an individual request of the system" href="show.html" accesskey="s">Show Request</a></li>
-	</ul>
-  </div>
+
   
-  <div id="leftcolumn"><img src="images/ljmu.png" width="165" height="165" alt="LJMULogo" title="LJMU Logo">
+  <div id="leftcolumn"><img src="images/LJMU.png" width="165" height="165" alt="LJMULogo" title="LJMU Logo">
   <div class="contactinfo"><h1>LJMU Contact Information</h1>
 	<p>Telephone Number: 0151 231 2121</p>
 	<p>Other contact information is available on the <a title ="LJMU Contact Information" href="http://www.ljmu.ac.uk/help.htm">LJMU</a> website</p></div>
     </div>
 <div id="maincolumn"><br><br>
+
+<% if logged_in? %>
+    <h1>Welcome <%=h current_user.username %></h1>
+   <% end %>
   
-  <h1>Holiday List</h1>
+  <h2>Holiday List</h2>
 <table border = "1" cellpadding = "5" rules="groups" frame="box" class="center">
 
 <thead>
   <tr> 
-  <th>User ID</th> <th>Staff Name</th>
+  <th>User ID</th> <th>Staff Name</th> <th>Username</th>
   </tr>
   </thead>
   
@@ -40,7 +36,7 @@
     <tbody>
     <tr>
     
-    <td><%= link_to holiday.userid, holiday %></td> <td><%= holiday.name %></td>
+    <td><%= link_to holiday.userid, holiday %></td> <td><%= holiday.name %></td><td><%= holiday.user.username %></td>
     <% end %>
     
     </table>
@@ -48,7 +44,7 @@
 
 
 <p>
-  <%= link_to "Create Holiday", new_holiday_path %>
+  <%= link_to "Create Holiday", new_holiday_path %> | <%= link_to "Logout", logout_path %>
 </p>
 
 

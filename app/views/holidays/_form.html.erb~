@@ -2,10 +2,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<<<<<<< HEAD
-=======
-
->>>>>>> 61b0389915bba759c429e435c2391c375f59e7ca
 </head>
 
 <body>
@@ -23,7 +19,7 @@
 	</ul>
   </div>
   
-  <div id="leftcolumn"><img src="images/ljmu.png" width="165" height="165" alt="LJMULogo" title="LJMU Logo">
+  <div id="leftcolumn"><img src="images/LJMU.png" width="165" height="165" alt="LJMULogo" title="LJMU Logo">
   <div class="contactinfo"><h1>LJMU Contact Information</h1>
 	<p>Telephone Number: 0151 231 2121</p>
 	<p>Other contact information is available on the <a title ="LJMU Contact Information" href="http://www.ljmu.ac.uk/help.htm">LJMU</a> website</p></div>
