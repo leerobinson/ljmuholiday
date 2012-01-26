@@ -20,8 +20,9 @@ class HolidaysController < ApplicationController
   def edit
     login_required
     @holiday = Holiday.find(params[:id])
-    if current_user.id != @holiday.user.id
+    if current_user.id != @holiday.user.id || if current_user.admin == false
     redirect_to holidays_path
+    end
     end
     
   end
