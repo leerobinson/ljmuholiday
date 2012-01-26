@@ -34875,3 +34875,5 @@ Processing SessionsController#new (for 127.0.0.1 at 2012-01-26 16:56:30) [GET]
 Rendering template within layouts/application
 Rendering sessions/new
 Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mHoliday Load (0.6ms)[0m   [0;1mSELECT * FROM "holidays" ORDER BY holidays.id DESC LIMIT 1[0m
+  [4;36;1mHoliday Load (0.6ms)[0m   [0;1mSELECT * FROM "holidays" [0m
