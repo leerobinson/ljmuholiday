@@ -22,18 +22,21 @@
 <h1><%=h @holiday.name %>'s holiday request</h1>
 
 <p>The holiday request details are listed below</p>
+
 <div class = "form">
-<p>User ID:<%=h @holiday.userid %></p>
+
 <p>Amount of days:<%=h @holiday.amountofdays %></p>
 <p>Start Date:<%=h @holiday.startdate %></p>
 <p>End Date:<%=h @holiday.enddate %></p>
-<br>
 <% if current_user.id == @holiday.user.id %>
 <p><%= link_to "Edit Holiday", edit_holiday_path %> | <%= link_to "Delete Holiday", @holiday,:confirm => "Confirming holiday request deletion?", :method => :delete %> </p>
 <% end %>
+
 </div>
 <br>
+
 <p><%= link_to "Return to Holiday Index", holidays_path %></p>
+
 </div>
 
 

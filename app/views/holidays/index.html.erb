@@ -29,7 +29,7 @@
 
 <thead>
   <tr> 
-  <th>User ID</th> <th>Staff Name</th> <th>Username</th>
+  <th>Username</th><th>Approved?</th>
   </tr>
   </thead>
   
@@ -37,7 +37,7 @@
     <tbody>
     <tr>
     
-    <td><%= link_to holiday.userid, holiday %></td> <td><%= holiday.name %></td><td><%= holiday.user.username %></td>
+    <td><%= link_to holiday.name, holiday %></td><td><%= holiday.user.username %></td>
     <% end %>
     
     </table>

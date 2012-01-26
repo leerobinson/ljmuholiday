@@ -24,11 +24,12 @@
    <% end %>
   
   <h2>Holiday List</h2>
+  <p>Below is a list of the current holiday requests. To view a request please click on the User ID link provided.</p>
 <table border = "1" cellpadding = "5" rules="groups" frame="box" class="center">
 
 <thead>
   <tr> 
-  <th>User ID</th> <th>Staff Name</th> <th>Username</th>
+  <th>User ID</th> <th>Staff Name</th> <th>Username</th> <th>
   </tr>
   </thead>
   
@@ -36,7 +37,7 @@
     <tbody>
     <tr>
     
-    <td><%= link_to holiday.userid, holiday %></td> <td><%= holiday.name %></td><td><%= holiday.user.username %></td>
+    <td><%= link_to holiday.name, holiday %></td><td><%= holiday.user.username %></td>
     <% end %>
     
     </table>
