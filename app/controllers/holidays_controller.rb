@@ -49,7 +49,6 @@ class HolidaysController < ApplicationController
   
   def update
     @holiday = Holiday.find(params[:id])
-    
     if @holiday.save
       @holiday.update_attributes(params[:holiday])
       flash[:notice] = "Holiday updated"

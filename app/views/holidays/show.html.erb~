@@ -19,7 +19,7 @@
  
 <div id="maincolumn"><br>
 
-<h1><%=h @holiday.user.id %>'s holiday request</h1>
+<h1><%=h @holiday.user.username %>'s holiday request</h1>
 
 <p>The holiday request details are listed below</p>
 

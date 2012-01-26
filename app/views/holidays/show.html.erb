@@ -25,10 +25,10 @@
 
 <div class = "form">
 
-<p>Amount of days:<%=h @holiday.amountofdays %></p>
-<p>Start Date:<%=h @holiday.startdate %></p>
-<p>End Date:<%=h @holiday.enddate %></p>
-<p>Approved:<%=h @holiday.approved %></p>
+<p>Amount of days: <%=h @holiday.amountofdays %></p>
+<p>Start Date: <%=h @holiday.startdate %></p>
+<p>End Date: <%=h @holiday.enddate %></p>
+<p>Approved: <%=h @holiday.approved %></p>
 
 <% if current_user.id == @holiday.user.id || current_user.admin == true %>
 <p><% if @holiday.approved != true %>  <%= link_to "Edit Holiday", edit_holiday_path %> | <% end %>  <%= link_to "Delete Holiday", @holiday,:confirm => "Confirming holiday request deletion?", :method => :delete %> </p>
