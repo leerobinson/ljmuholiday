@@ -25,11 +25,6 @@
 <% form_for @holiday do |h| %>
 
 <p>
-  <%= h.label :userid, "User ID" %><br />
-  <%= h.text_field :userid %>
-</p>
-
-<p>
   <%= h.label :name, "Staff Name" %><br />
   <%= h.text_field :name, :value => current_user.username %>
 </p>
@@ -47,6 +42,11 @@
 <p>
   <%= h.label :enddate, "End Date" %><br />
   <%= h.text_field :enddate %>
+</p>
+<% if current_user.admin == true %>
+<p>
+  <%= h.label :approved, "Approved?" %><br />
+  <%= h.check_box :approved %>
 </p>
 
 <p>

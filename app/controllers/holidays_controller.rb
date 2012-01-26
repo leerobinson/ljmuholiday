@@ -11,7 +11,10 @@ class HolidaysController < ApplicationController
 
   def new
     login_required
-    @holiday = Holiday.new 
+    @holiday = Holiday.new
+    if current_user.admin == true
+    redirect_to holidays_path
+    end 
   end
 
   def edit

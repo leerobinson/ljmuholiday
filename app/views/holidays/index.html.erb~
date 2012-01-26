@@ -29,7 +29,7 @@
 
 <thead>
   <tr> 
-  <th>User ID</th> <th>Staff Name</th> <th>Username</th> <th>
+  <th>Username</th><th>Approved?</th>
   </tr>
   </thead>
   
@@ -37,7 +37,7 @@
     <tbody>
     <tr>
     
-    <td><%= link_to holiday.name, holiday %></td><td><%= holiday.user.username %></td>
+    <td><%= link_to holiday.user.username, holiday %></td><td><%= holiday.approved%></td>
     <% end %>
     
     </table>
@@ -45,7 +45,7 @@
 
 
 <p>
-  <%= link_to "Create Holiday", new_holiday_path %> | <%= link_to "Logout", logout_path %>
+<% if current_user.admin != true %>  <%= link_to "Create Holiday", new_holiday_path %> <% end %> | <%= link_to "Logout", logout_path %>
 </p>
 
 

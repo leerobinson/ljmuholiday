@@ -28531,3 +28531,1241 @@ Rendering template within layouts/application
 Rendering holidays/show
   [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
 Completed in 17ms (View: 9, DB: 1) | 200 OK [http://localhost/holidays/17]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 14:52:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 15ms (View: 6, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-26 14:52:10) [GET]
+  Parameters: {"action"=>"show", "id"=>"18", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 18) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/holidays/18]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 14:52:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#new (for 127.0.0.1 at 2012-01-26 14:52:12) [GET]
+  Parameters: {"action"=>"new", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering holidays/new
+
+ActionView::TemplateError (undefined method `checkbox' for #<ActionView::Helpers::FormBuilder:0xb5f7b8d0>) on line #49 of app/views/holidays/_form.html.erb:
+46: 
+47: <p>
+48:   <%= h.label :approved, "Approved?" %><br />
+49:   <%= h.checkbox :approved %>
+50: </p>
+51: 
+52: <p>
+
+    app/views/holidays/_form.html.erb:49
+    app/views/holidays/_form.html.erb:25
+    app/views/holidays/new.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (94.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 14:52:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 13ms (View: 4, DB: 0) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#new (for 127.0.0.1 at 2012-01-26 14:52:25) [GET]
+  Parameters: {"action"=>"new", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering holidays/new
+Rendered holidays/_form (7.5ms)
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://localhost/holidays/new]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 14:52:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 14:55:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 23ms (View: 12, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-26 14:55:15) [GET]
+  Parameters: {"action"=>"show", "id"=>"17", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 17) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 14ms (View: 4, DB: 1) | 200 OK [http://localhost/holidays/17]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 14:55:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#new (for 127.0.0.1 at 2012-01-26 14:55:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering holidays/new
+Rendered holidays/_form (6.4ms)
+Completed in 17ms (View: 8, DB: 0) | 200 OK [http://localhost/holidays/new]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 14:55:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 14:55:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#new (for 127.0.0.1 at 2012-01-26 14:55:42) [GET]
+  Parameters: {"action"=>"new", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering holidays/new
+Rendered holidays/_form (6.8ms)
+Completed in 16ms (View: 8, DB: 0) | 200 OK [http://localhost/holidays/new]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 14:55:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#new (for 127.0.0.1 at 2012-01-26 14:56:42) [GET]
+  Parameters: {"action"=>"new", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering holidays/new
+Rendered holidays/_form (5.6ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/holidays/new]
+
+
+Processing HolidaysController#create (for 127.0.0.1 at 2012-01-26 14:56:54) [POST]
+  Parameters: {"commit"=>"Save Holiday", "action"=>"create", "authenticity_token"=>"7o6Yi1G24u4S6s0wjnJ/nQ9vn1KByL4ddTFifSoXIOI=", "holiday"=>{"name"=>"tomelsworthy", "enddate"=>"2012/03/05", "approved"=>"1", "amountofdays"=>"2", "startdate"=>"2012/03/03"}, "controller"=>"holidays"}
+  [4;35;1mHoliday Create (0.2ms)[0m   [0mINSERT INTO "holidays" ("name", "created_at", "enddate", "updated_at", "approved", "amountofdays", "user_id", "startdate") VALUES('tomelsworthy', '2012-01-26 14:56:54', '2012-03-05', '2012-01-26 14:56:54', 't', 2, NULL, '2012-03-03')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mHoliday Update (0.2ms)[0m   [0mUPDATE "holidays" SET "updated_at" = '2012-01-26 14:56:54', "user_id" = 2 WHERE "id" = 19[0m
+Redirected to http://localhost:3000/holidays
+Completed in 217ms (DB: 1) | 302 Found [http://localhost/holidays]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 14:56:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-26 14:56:59) [GET]
+  Parameters: {"action"=>"show", "id"=>"19", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mHoliday Load (0.1ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 19) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/holidays/19]
+
+
+Processing HolidaysController#destroy (for 127.0.0.1 at 2012-01-26 14:57:00) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"7o6Yi1G24u4S6s0wjnJ/nQ9vn1KByL4ddTFifSoXIOI=", "id"=>"19", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mHoliday Load (0.1ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 19) [0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 19[0m
+Redirected to http://localhost:3000/holidays
+Completed in 68ms (DB: 0) | 302 Found [http://localhost/holidays/19]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 14:57:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#new (for 127.0.0.1 at 2012-01-26 14:57:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering holidays/new
+Rendered holidays/_form (6.5ms)
+Completed in 17ms (View: 8, DB: 0) | 200 OK [http://localhost/holidays/new]
+
+
+Processing HolidaysController#create (for 127.0.0.1 at 2012-01-26 14:57:12) [POST]
+  Parameters: {"commit"=>"Save Holiday", "action"=>"create", "authenticity_token"=>"7o6Yi1G24u4S6s0wjnJ/nQ9vn1KByL4ddTFifSoXIOI=", "holiday"=>{"name"=>"tomelsworthy", "enddate"=>"2012/01/13", "approved"=>"1", "amountofdays"=>"2", "startdate"=>"2012/03/02"}, "controller"=>"holidays"}
+  [4;36;1mHoliday Create (0.3ms)[0m   [0;1mINSERT INTO "holidays" ("name", "created_at", "enddate", "updated_at", "approved", "amountofdays", "user_id", "startdate") VALUES('tomelsworthy', '2012-01-26 14:57:12', '2012-01-13', '2012-01-26 14:57:12', 't', 2, NULL, '2012-03-02')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mHoliday Update (0.1ms)[0m   [0;1mUPDATE "holidays" SET "updated_at" = '2012-01-26 14:57:12', "user_id" = 2 WHERE "id" = 20[0m
+Redirected to http://localhost:3000/holidays
+Completed in 180ms (DB: 1) | 302 Found [http://localhost/holidays]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 14:57:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mHoliday Load (0.3ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 16ms (View: 6, DB: 1) | 200 OK [http://localhost/holidays]
+  [4;36;1mHoliday Load (0.6ms)[0m   [0;1mSELECT * FROM "holidays" ORDER BY holidays.id DESC LIMIT 1[0m
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-26 14:58:54) [GET]
+  Parameters: {"action"=>"show", "id"=>"20", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mHoliday Load (0.1ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 20) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/holidays/20]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 14:58:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mHoliday Load (0.3ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 16ms (View: 7, DB: 1) | 200 OK [http://localhost/holidays]
+WARNING: Can't mass-assign these protected attributes: admin
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'admin') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'admin@ljmuhr.ac.uk') LIMIT 1[0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-01-26 14:59:54', '2012-01-26 14:59:54', 'admin', NULL, '4c20e0c86f662f9d674c048be803980357bf63cb', 'c63ec908183f0501ef368f7c2b9278f9ec2b2ccb', 'admin@ljmuhr.ac.uk')[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mUser Delete all (84.1ms)[0m   [0;1mDELETE FROM "users" WHERE ("id" IN (5)) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" [0m
+WARNING: Can't mass-assign these protected attributes: admin
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'admin@ljmuhr.ac.uk') LIMIT 1[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-01-26 15:02:33', '2012-01-26 15:02:33', 'admin', NULL, '88c32a1bad7cb7da582ae531bd42a56d4c3d340a', 'fcacdba432401e85998c40c00264aca5a62f6f98', 'admin@ljmuhr.ac.uk')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mUser Delete all (65.5ms)[0m   [0;1mDELETE FROM "users" WHERE ("id" IN (6)) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" [0m
+WARNING: Can't mass-assign these protected attributes: admin
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'admin@ljmuhr.ac.uk') LIMIT 1[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-01-26 15:02:50', '2012-01-26 15:02:50', 'admin', NULL, '63ed8ecbbdb78d1ecedf892dc750036d9606fed2', '1493ebe0367c2b07d6e835de43cd0d08050249e8', 'admin@ljmuhr.ac.uk')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;36;1mUser Delete all (62.1ms)[0m   [0;1mDELETE FROM "users" WHERE ("id" IN (7)) [0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2012-01-26 15:06:15) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-01-26 15:06:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2012-01-26 15:06:16) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/signup]
+WARNING: Can't mass-assign these protected attributes: admin
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'admin@ljmu.ac.uk') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-01-26 15:08:18', '2012-01-26 15:08:18', 'admin', NULL, '266d8ab33dfb74b20a7fe281d696db1a336b6443', '0a55aeb91885d7a04788f72fdbd99c420ef4c9e7', 'admin@ljmu.ac.uk')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+  [4;36;1mUser Delete all (102.0ms)[0m   [0;1mDELETE FROM "users" WHERE ("id" IN (8)) [0m
+WARNING: Can't mass-assign these protected attributes: admin
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'admin') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'admin@ljmu.ac.uk') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-01-26 15:08:37', '2012-01-26 15:08:37', 'admin', NULL, 'ac54f0132fa1200a401566d95e8f051ce000df8b', '87f7cbc43da931a07d79b48e534b71e77ca71d67', 'admin@ljmu.ac.uk')[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+  [4;35;1mUser Delete all (106.9ms)[0m   [0mDELETE FROM "users" WHERE ("id" IN (9)) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'admin@ljmu.ac.uk') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-01-26 15:09:41', '2012-01-26 15:09:41', 'admin', NULL, '514de5d6fe330528150a13c8767f870a43c45125', '095bb2391822e5cff4eba59c931ee9c6e537833e', 'admin@ljmu.ac.uk')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'admin' AND "users".id <> 10) LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'admin@ljmu.ac.uk' AND "users".id <> 10) LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE "users" SET "updated_at" = '2012-01-26 15:10:46', "admin" = 't' WHERE "id" = 10[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: admin
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'newadmin') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'newadmin@ljmu.ac.uk') LIMIT 1[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-01-26 15:11:43', '2012-01-26 15:11:43', 'newadmin', NULL, '9abc3e2d81c0ad4b2ffef30fd8fedf02fe922f6c', '92c8bb1f2d2de61eb6ad0217145eb87f254ba801', 'newadmin@ljmu.ac.uk')[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+  [4;36;1mUser Delete all (121.8ms)[0m   [0;1mDELETE FROM "users" WHERE ("id" IN (11)) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-01-26 15:14:48) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-01-26 15:14:54) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"7o6Yi1G24u4S6s0wjnJ/nQ9vn1KByL4ddTFifSoXIOI=", "controller"=>"sessions", "login"=>"admin", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin') LIMIT 1[0m
+Redirected to http://localhost:3000/holidays
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:14:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+
+SyntaxError (/home/leer/Code/ljmuholiday/app/models/holiday.rb:12: syntax error, unexpected $end, expecting kEND):
+  app/controllers/holidays_controller.rb:4:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-01-26 15:15:48) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"7o6Yi1G24u4S6s0wjnJ/nQ9vn1KByL4ddTFifSoXIOI=", "controller"=>"sessions", "login"=>"l.robinson1@2009.ljmu.ac.uk", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'l.robinson1@2009.ljmu.ac.uk') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'l.robinson1@2009.ljmu.ac.uk') LIMIT 1[0m
+Redirected to http://localhost:3000/holidays
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:15:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+SyntaxError (/home/leer/Code/ljmuholiday/app/models/holiday.rb:12: syntax error, unexpected $end, expecting kEND):
+  app/controllers/holidays_controller.rb:4:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (84.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:16:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mHoliday Load (0.3ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 16ms (View: 7, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2012-01-26 15:16:03) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-01-26 15:16:03) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-01-26 15:16:08) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"7o6Yi1G24u4S6s0wjnJ/nQ9vn1KByL4ddTFifSoXIOI=", "controller"=>"sessions", "login"=>"admin", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin') LIMIT 1[0m
+Redirected to http://localhost:3000/holidays
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:16:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mHoliday Load (0.3ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 17ms (View: 7, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-26 15:16:12) [GET]
+  Parameters: {"action"=>"show", "id"=>"20", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 20) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 18ms (View: 9, DB: 1) | 200 OK [http://localhost/holidays/20]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:16:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mHoliday Load (0.3ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 15ms (View: 7, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#new (for 127.0.0.1 at 2012-01-26 15:16:13) [GET]
+  Parameters: {"action"=>"new", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+Rendering template within layouts/application
+Rendering holidays/new
+Rendered holidays/_form (8.9ms)
+Completed in 20ms (View: 13, DB: 0) | 200 OK [http://localhost/holidays/new]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:16:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mHoliday Load (0.3ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 15ms (View: 7, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-26 15:16:24) [GET]
+  Parameters: {"action"=>"show", "id"=>"20", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 20) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://localhost/holidays/20]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:16:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mHoliday Load (0.3ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 21ms (View: 9, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-26 15:16:27) [GET]
+  Parameters: {"action"=>"show", "id"=>"18", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mHoliday Load (0.1ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 18) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://localhost/holidays/18]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:16:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mHoliday Load (0.3ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 17ms (View: 7, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-26 15:16:28) [GET]
+  Parameters: {"action"=>"show", "id"=>"17", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 17) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 14ms (View: 4, DB: 1) | 200 OK [http://localhost/holidays/17]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:16:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-26 15:16:30) [GET]
+  Parameters: {"action"=>"show", "id"=>"20", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 20) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 58ms (View: 4, DB: 1) | 200 OK [http://localhost/holidays/20]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:16:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2012-01-26 15:16:34) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-01-26 15:16:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-01-26 15:16:38) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"7o6Yi1G24u4S6s0wjnJ/nQ9vn1KByL4ddTFifSoXIOI=", "controller"=>"sessions", "login"=>"l.robinson1@2009.ljmu.ac.uk", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'l.robinson1@2009.ljmu.ac.uk') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'l.robinson1@2009.ljmu.ac.uk') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 12ms (View: 2, DB: 0) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-01-26 15:16:43) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"7o6Yi1G24u4S6s0wjnJ/nQ9vn1KByL4ddTFifSoXIOI=", "controller"=>"sessions", "login"=>"l.robinson1@2009.ljmu.ac.uk", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'l.robinson1@2009.ljmu.ac.uk') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'l.robinson1@2009.ljmu.ac.uk') LIMIT 1[0m
+Redirected to http://localhost:3000/holidays
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:16:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-26 15:16:46) [GET]
+  Parameters: {"action"=>"show", "id"=>"20", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 20) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 63ms (View: 4, DB: 1) | 200 OK [http://localhost/holidays/20]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:16:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#new (for 127.0.0.1 at 2012-01-26 15:16:47) [GET]
+  Parameters: {"action"=>"new", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering holidays/new
+Rendered holidays/_form (6.4ms)
+Completed in 17ms (View: 8, DB: 0) | 200 OK [http://localhost/holidays/new]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:16:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mHoliday Load (0.3ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 17ms (View: 7, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-26 15:17:33) [GET]
+  Parameters: {"action"=>"show", "id"=>"17", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mHoliday Load (0.1ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 17) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/holidays/17]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:17:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mHoliday Load (0.3ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 16ms (View: 7, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#new (for 127.0.0.1 at 2012-01-26 15:17:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering holidays/new
+Rendered holidays/_form (5.0ms)
+Completed in 16ms (View: 6, DB: 0) | 200 OK [http://localhost/holidays/new]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:17:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mHoliday Load (0.3ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 15ms (View: 7, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2012-01-26 15:17:39) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-01-26 15:17:39) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-01-26 15:17:43) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"7o6Yi1G24u4S6s0wjnJ/nQ9vn1KByL4ddTFifSoXIOI=", "controller"=>"sessions", "login"=>"admin", "password"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'admin') LIMIT 1[0m
+Redirected to http://localhost:3000/holidays
+Completed in 7ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:17:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mHoliday Load (0.3ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 17ms (View: 7, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-26 15:17:45) [GET]
+  Parameters: {"action"=>"show", "id"=>"17", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 17) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 56ms (View: 46, DB: 1) | 200 OK [http://localhost/holidays/17]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:17:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mHoliday Load (0.3ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 15ms (View: 7, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-26 15:17:47) [GET]
+  Parameters: {"action"=>"show", "id"=>"20", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 20) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 14ms (View: 3, DB: 1) | 200 OK [http://localhost/holidays/20]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:17:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mHoliday Load (0.3ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 16ms (View: 7, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#new (for 127.0.0.1 at 2012-01-26 15:17:48) [GET]
+  Parameters: {"action"=>"new", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+Rendering template within layouts/application
+Rendering holidays/new
+Rendered holidays/_form (6.2ms)
+Completed in 16ms (View: 8, DB: 0) | 200 OK [http://localhost/holidays/new]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:17:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 17ms (View: 5, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-26 15:18:49) [GET]
+  Parameters: {"action"=>"show", "id"=>"18", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mHoliday Load (0.1ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 18) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 14ms (View: 3, DB: 0) | 200 OK [http://localhost/holidays/18]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:18:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mHoliday Load (0.3ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 18ms (View: 8, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#edit (for 127.0.0.1 at 2012-01-26 15:18:55) [GET]
+  Parameters: {"action"=>"edit", "id"=>"18", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 18) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Redirected to http://localhost:3000/holidays
+Completed in 11ms (DB: 1) | 302 Found [http://localhost/holidays/edit/18]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:18:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 12ms (View: 5, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:20:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mHoliday Load (0.3ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 21ms (View: 12, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:20:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mHoliday Load (0.3ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 23ms (View: 13, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-26 15:20:26) [GET]
+  Parameters: {"action"=>"show", "id"=>"20", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 20) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 12ms (View: 4, DB: 1) | 200 OK [http://localhost/holidays/20]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:20:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mHoliday Load (0.3ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 14ms (View: 7, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2012-01-26 15:21:03) [GET]
+  Parameters: {"action"=>"new", "controller"=>"holidays"}
+
+SyntaxError (/home/leer/Code/ljmuholiday/app/controllers/holidays_controller.rb:61: syntax error, unexpected $end, expecting kEND):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (29.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HolidaysController#new (for 127.0.0.1 at 2012-01-26 15:21:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+Redirected to http://localhost:3000/holidays
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/holidays/new]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:21:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mHoliday Load (0.3ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 17ms (View: 7, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-26 15:21:56) [GET]
+  Parameters: {"action"=>"show", "id"=>"17", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mHoliday Load (0.1ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 17) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://localhost/holidays/17]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:21:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-26 15:21:59) [GET]
+  Parameters: {"action"=>"show", "id"=>"18", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 18) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 12ms (View: 4, DB: 1) | 200 OK [http://localhost/holidays/18]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:22:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mHoliday Load (0.3ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 16ms (View: 6, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-26 15:22:00) [GET]
+  Parameters: {"action"=>"show", "id"=>"20", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 20) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 13ms (View: 4, DB: 1) | 200 OK [http://localhost/holidays/20]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:22:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mHoliday Load (0.3ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 16ms (View: 7, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-26 15:22:49) [GET]
+  Parameters: {"action"=>"show", "id"=>"18", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mHoliday Load (0.1ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 18) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 20ms (View: 10, DB: 1) | 200 OK [http://localhost/holidays/18]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:22:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 12ms (View: 5, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2012-01-26 15:22:52) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-01-26 15:22:52) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-01-26 15:22:56) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"7o6Yi1G24u4S6s0wjnJ/nQ9vn1KByL4ddTFifSoXIOI=", "controller"=>"sessions", "login"=>"l.robinson1@2009.ljmu.ac.uk", "password"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'l.robinson1@2009.ljmu.ac.uk') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'l.robinson1@2009.ljmu.ac.uk') LIMIT 1[0m
+Redirected to http://localhost:3000/holidays
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:22:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mHoliday Load (0.3ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 17ms (View: 7, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-26 15:22:58) [GET]
+  Parameters: {"action"=>"show", "id"=>"17", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mHoliday Load (0.1ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 17) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+ActionView::TemplateError (undefined local variable or method `holiday' for #<ActionView::Base:0xb6037abc>) on line #34 of app/views/holidays/show.html.erb:
+31: <p>Approved:<%=h @holiday.approved %></p>
+32: 
+33: <% if current_user.id == @holiday.user.id %>
+34: <p><% if holiday.approved != true %> <%= link_to "Edit Holiday", edit_holiday_path %> | <% end %> <%= link_to "Delete Holiday", @holiday,:confirm => "Confirming holiday request deletion?", :method => :delete %> </p>
+35: <% end %>
+36: 
+37: </div>
+
+    app/views/holidays/show.html.erb:34
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (39.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-26 15:23:07) [GET]
+  Parameters: {"action"=>"show", "id"=>"17", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 17) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 21ms (View: 12, DB: 0) | 200 OK [http://localhost/holidays/17]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:23:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mHoliday Load (0.3ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 16ms (View: 7, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-26 15:23:11) [GET]
+  Parameters: {"action"=>"show", "id"=>"20", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mHoliday Load (0.1ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 20) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 11ms (View: 3, DB: 0) | 200 OK [http://localhost/holidays/20]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:23:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 14ms (View: 7, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2012-01-26 15:23:13) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-01-26 15:23:13) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-01-26 15:23:17) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"7o6Yi1G24u4S6s0wjnJ/nQ9vn1KByL4ddTFifSoXIOI=", "controller"=>"sessions", "login"=>"tomelsworthy", "password"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'tomelsworthy') LIMIT 1[0m
+Redirected to http://localhost:3000/holidays
+Completed in 57ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:23:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mHoliday Load (0.4ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 19ms (View: 8, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-01-26 15:23:19) [GET]
+  Parameters: {"action"=>"show", "id"=>"20", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 20) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 15ms (View: 6, DB: 0) | 200 OK [http://localhost/holidays/20]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:23:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 14ms (View: 7, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#new (for 127.0.0.1 at 2012-01-26 15:24:06) [GET]
+  Parameters: {"action"=>"new", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering holidays/new
+Rendered holidays/_form (5.0ms)
+Completed in 16ms (View: 6, DB: 0) | 200 OK [http://localhost/holidays/new]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-01-26 15:24:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mHoliday Load (0.3ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Completed in 15ms (View: 7, DB: 1) | 200 OK [http://localhost/holidays]
