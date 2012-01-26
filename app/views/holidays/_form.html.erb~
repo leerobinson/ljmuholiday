@@ -26,7 +26,7 @@
 
 <p>
   <%= h.label :name, "Staff Name" %><br />
-  <%= h.text_field :name, :value => current_user.username %>
+  <%= h.text_field :name, :value => @holiday.user.username %>
 </p>
 
 <p>
@@ -48,6 +48,7 @@
   <%= h.label :approved, "Approved?" %><br />
   <%= h.check_box :approved %>
 </p>
+<% end %>
 
 <p>
   <%= h.submit "Save Holiday" %> | <%= link_to "Return to holidays", @holiday %>

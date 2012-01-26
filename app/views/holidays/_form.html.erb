@@ -25,11 +25,6 @@
 <% form_for @holiday do |h| %>
 
 <p>
-  <%= h.label :name, "Staff Name" %><br />
-  <%= h.text_field :name, :value => current_user.username %>
-</p>
-
-<p>
   <%= h.label :amountofdays, "Amount of Days" %><br />
   <%= h.text_field :amountofdays %>
 </p>

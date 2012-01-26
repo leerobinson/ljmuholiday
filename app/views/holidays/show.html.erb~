@@ -19,7 +19,7 @@
  
 <div id="maincolumn"><br>
 
-<h1><%=h @holiday.name %>'s holiday request</h1>
+<h1><%=h @holiday.user.id %>'s holiday request</h1>
 
 <p>The holiday request details are listed below</p>
 
@@ -32,7 +32,7 @@
 
 <% if current_user.id == @holiday.user.id || current_user.admin == true %>
 <p><% if @holiday.approved != true %>  <%= link_to "Edit Holiday", edit_holiday_path %> | <% end %>  <%= link_to "Delete Holiday", @holiday,:confirm => "Confirming holiday request deletion?", :method => :delete %> </p>
-<% end %> <% end %>
+<% end %>
 
 </div>
 <br>

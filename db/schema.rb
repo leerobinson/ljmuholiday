@@ -9,10 +9,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120126144354) do
+ActiveRecord::Schema.define(:version => 20120126161055) do
 
   create_table "holidays", :force => true do |t|
-    t.string   "name"
     t.integer  "amountofdays"
     t.date     "startdate"
     t.date     "enddate"
