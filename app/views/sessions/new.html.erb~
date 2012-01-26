@@ -32,7 +32,7 @@
   </p>
   <p><%= submit_tag "Log in" %></p>
 <% end %>
-<
+</div>
 </div>
 
 
