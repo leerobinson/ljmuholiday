@@ -17,7 +17,7 @@
 	<p>Telephone Number: 0151 231 2121</p>
 	<p>Other contact information is available on the <a title ="LJMU Contact Information" href="http://www.ljmu.ac.uk/help.htm">LJMU</a> website</p></div>
     </div>
-<div id="maincolumn"><br><br>
+<div id="maincolumn"><br>
 
 <% if logged_in? %>
     <h1>Welcome <%=h current_user.username %></h1>

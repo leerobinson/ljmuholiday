@@ -15,12 +15,12 @@
 	<p>Telephone Number: 0151 231 2121</p>
 	<p>Other contact information is available on the <a title ="LJMU Contact Information" href="http://www.ljmu.ac.uk/help.htm">LJMU</a> website</p></div>
     </div>
-<div id="maincolumn"><br><br>
+<div id="maincolumn"><br>
 
 <h1>User Registration</h1>
 
 <p>Already have an account? <%= link_to "Log in", login_path %>.</p>
-
+<div class="form">
 <% form_for @user do |f| %>
   <%= f.error_messages %>
   <p>
@@ -41,7 +41,7 @@
   </p>
   <p><%= f.submit "Sign up" %></p>
 <% end %>
-
+</div>
 </div>
 
 

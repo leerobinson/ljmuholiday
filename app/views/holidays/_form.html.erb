@@ -19,7 +19,9 @@
 
 
 <h1>Holiday Details</h1>
+<p>Please fill in all fields to complete your request</p>
 
+<div class="form">
 <% form_for @holiday do |h| %>
 
 <p>
@@ -33,12 +35,12 @@
 </p>
 
 <p>
-  <%= h.label :amountofdays, "Amount of Days:" %><br />
+  <%= h.label :amountofdays, "Amount of Days" %><br />
   <%= h.text_field :amountofdays %>
 </p>
 
 <p>
-  <%= h.label :startdate, "Start Date:" %><br />
+  <%= h.label :startdate, "Start Date" %><br />
   <%= h.text_field :startdate %>
 </p>
 
@@ -52,7 +54,7 @@
 </p>
 
 <% end %>
-
+</div>
 </div>
 
 <div id="rightcolumn"> 
