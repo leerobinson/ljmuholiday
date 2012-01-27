@@ -17,7 +17,15 @@ Password: test
 Username: leerobinson
 Password: usualpass
 
-In the work directory of this repository is where the workflow map and database schema's are stored. These include both original Balsamiq files, both PNG files of the mock ups and both PDF's of the mock up.
+In the work directory of this repository is where the workflow map and database schema's are stored. These include both original Balsamiq files, both PNG files of the mock ups and both PDF's of the mock up. The names of these files are as follows:
+
+Workflow Map Balsamiq - workflowapp.bmml
+Workflow Map PNG - workflowapp.ong
+Workflow Map PDF - leerobinsonljmuholidayworkflowmap.pdf
+
+Database Schema Balsamiq - ljmuholidaydatabaseschema.bmml
+Database Schema PNG - ljmuholidaydatabaseschema.png
+Database Schema PDF - leerobinsonljmuholidaydatabaseschema.pdf
 
 The database schema stores the information about both tables (holidays and users). The holidays table and users table are related through the user_id which is initialized when a user is created.
 
