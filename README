@@ -17,4 +17,4 @@ Password: usualpass
 In the work directory of this repository is where the workflow map and database schema's are stored. The database schema stores the information about both tables (holidays and users). The workflow map shows the navigation and
 abilities of the users/admin which are possible to them. This will highlight the differences in option the users and admin have in different scenarios.
 
-Flash messages display on certain events such as new user being created, new holiday request and so on.
+Flash messages display on certain events such as new user being created, new holiday request and so on. 
