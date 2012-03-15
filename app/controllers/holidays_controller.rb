@@ -1,25 +1,20 @@
 class HolidaysController < ApplicationController
   def index
     login_required
-    @holiday = Holiday.all
-    
-    respond_to do |format|
-    if logged_in? != false
-    format.html
-    format.xml { render:xml => @holiday }
-    format.atom
-    
-    else
-    
-    end
-    
-    end
+    @holiday = Holiday.all  
     
   end
 
   def show
     login_required
     @holiday = Holiday.find(params[:id])
+    
+    respond_to do |format|
+    format.html
+    format.xml { render:xml => @holiday }
+    format.atom
+    end
+    
   end
 
   def new
