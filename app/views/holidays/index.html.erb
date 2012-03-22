@@ -25,6 +25,7 @@
   
   <h2>Holiday List</h2>
   <p>Below is a list of the current holiday requests. To view a request please click on the User ID link provided.</p>
+  
 <table border = "1" cellpadding = "5" rules="groups" frame="box" class="center">
 
 <thead>
@@ -41,7 +42,8 @@
     <% end %>
     
     </table>
-    
+    <br>
+    <%= will_paginate @holiday %>
 
 
 <p>

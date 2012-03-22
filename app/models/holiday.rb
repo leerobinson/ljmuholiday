@@ -7,5 +7,9 @@ class Holiday < ActiveRecord::Base
     validates_presence_of :enddate
     
     validates_length_of :amountofdays, :minimum =>1
+    
+    def self.search(search, page)
+      paginate :per_page => 10, :page => params[:page]
+    end
 
 end

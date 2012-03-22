@@ -7,6 +7,7 @@ RAILS_GEM_VERSION = '2.3.11' unless defined? RAILS_GEM_VERSION
 require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
+config.gem 'will_paginate', :version => '~> 2.3.11'
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.
@@ -14,7 +15,7 @@ Rails::Initializer.run do |config|
   # Add additional load paths for your own custom dirs
   # config.autoload_paths += %W( #{RAILS_ROOT}/extras )
 
-  # Specify gems that this application depends on and have them installed with rake gems:install
+  # Specify gems that this application depends on and have them installed with rake gems:installrequire 'will_paginate'
   # config.gem "bj"
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
@@ -28,7 +29,7 @@ Rails::Initializer.run do |config|
   # you must remove the Active Record framework.
   # config.frameworks -= [ :active_record, :active_resource, :action_mailer ]
 
-  # Activate observers that should always be running
+  # Activate observers that shouldrequire 'will_paginate' always be running
   # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
 
   # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
@@ -36,6 +37,7 @@ Rails::Initializer.run do |config|
   config.time_zone = 'UTC'
 
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
-  # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
+  # config.i18n.load_path require 'will_paginate'+= Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
+  require 'will_paginate'
 end

@@ -1,7 +1,9 @@
 class HolidaysController < ApplicationController
   def index
     login_required
-    @holiday = Holiday.all  
+    @holiday = Holiday.all
+    
+    @holiday = @holiday.paginate(:page => params[:page], :per_page => 20)  
     
   end
 
