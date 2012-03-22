@@ -8,6 +8,7 @@ require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
 config.gem 'will_paginate', :version => '~> 2.3.11'
+config.gem 'paperclip', :version => '~> 2.3.11'
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.
@@ -40,4 +41,5 @@ config.gem 'will_paginate', :version => '~> 2.3.11'
   # config.i18n.load_path require 'will_paginate'+= Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
   require 'will_paginate'
+  require 'paperclip'
 end
