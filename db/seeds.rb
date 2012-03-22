@@ -14,8 +14,10 @@ end
 User.all.each do |user|
  Holiday.populate(5..10) do |holiday|
   holiday.amountofdays = Faker::Lorem.sentence
-  holiday.startdate = Time.now
-  holiday.enddate = Time.now + 8
+  holiday.startdate = DateTime.now
+  holiday.enddate = DateTime.now + 8
   holiday.user_id = user.id
  end
 end
+
+	
