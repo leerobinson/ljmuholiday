@@ -1,6 +1,6 @@
 Lee Robinson - 416495 - Internet and Open Source - Assignment 2 - Basic Ruby on Rails Application for LJMU holiday request system.
 
-This LJMU Holiday Request application allows a user to create, edit, view and delete their own holiday requests. An admin also has the same abilities with the added feature of being able to approve a request. fun
+This LJMU Holiday Request application allows a user to create, edit, view and delete their own holiday requests. An admin also has the same abilities with the added feature of being able to approve a request. 
 
 One user is unable to edit or delete another's request however they can view it. The admin is unable to create a holiday request. When the admin approves a holiday request the information remains as the holiday request maker's username. The users are unable to try and approve their holiday request and are unable to access it. The only contact they have with the approved section is on show and index when the status of the approved is displayed. Once a holiday request has been approved the ability to edit the holiday request is no longer allowed for both user and admin. The request only has the ability to delete once the approved is true.
 
