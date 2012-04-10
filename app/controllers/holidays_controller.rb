@@ -3,7 +3,15 @@ class HolidaysController < ApplicationController
     login_required
     @holiday = Holiday.all
     
-    @holiday = @holiday.paginate(:page => params[:page], :per_page => 20)  
+    @holiday = Holiday.all.paginate(:page => params[:page], :per_page => 20)  
+
+	respond_to do |format|
+ 	format.html { }
+ 	format.js { render :update do |page|
+				page.replace_html 'maincolumn', :partial => @holiday,
+				:locals => {:collection => @holiday} end }
+ 	format.xml  { render :xml => @holiday }
+end
     
   end
 

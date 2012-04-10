@@ -1,0 +1,17 @@
+<table border = "1" cellpadding = "5" rules="groups" frame="box" class="center">
+
+<thead>
+  <tr> 
+  <th>Username</th><th>Approved?</th>
+  </tr>
+  </thead>
+    <tbody>
+    <tr>
+    <% div_for holiday do %>
+    <td><%= link_to holiday.user.username, holiday %></td><td><%= holiday.approved%></td>
+
+    
+    </table>
+    <% end %>	
+
+   

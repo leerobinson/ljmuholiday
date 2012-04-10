@@ -22,12 +22,8 @@
 <p>Please fill in all fields to complete your request</p>
 
 <div class="form">
-<% form_for @holiday do |h| %>
 
-<p>
-  <%= h.label :name, "Staff Name" %><br />
-  <%= h.text_field :name, :value => @holiday.user.username %>
-</p>
+<% form_for @holiday, :html => { :multipart => true } do |h| %>
 
 <p>
   <%= h.label :amountofdays, "Amount of Days" %><br />
@@ -43,12 +39,11 @@
   <%= h.label :enddate, "End Date" %><br />
   <%= h.text_field :enddate %>
 </p>
-<% if current_user.admin == true %>
 <p>
-  <%= h.label :approved, "Approved?" %><br />
-  <%= h.check_box :approved %>
+  
+  <%= h.file_field :photo %>
+  
 </p>
-<% end %>
 
 <p>
   <%= h.submit "Save Holiday" %> | <%= link_to "Return to holidays", @holiday %>

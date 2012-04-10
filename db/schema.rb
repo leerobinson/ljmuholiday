@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120126161055) do
+ActiveRecord::Schema.define(:version => 20120410102734) do
 
   create_table "holidays", :force => true do |t|
     t.integer  "amountofdays"
@@ -19,6 +19,10 @@ ActiveRecord::Schema.define(:version => 20120126161055) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.boolean  "approved"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   create_table "users", :force => true do |t|

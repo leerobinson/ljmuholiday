@@ -43,7 +43,13 @@
     
     </table>
     <br>
-    <%= will_paginate @holiday %>
+    
+	
+
+
+<%= will_paginate @holiday, :remote => "true" %>
+
+	
 
 
 <p>

@@ -9,7 +9,7 @@ require File.join(File.dirname(__FILE__), 'boot')
 Rails::Initializer.run do |config|
 config.gem 'will_paginate', :version => '~> 2.3.11'
 config.gem 'paperclip', :version => '~> 2.3.11'
-
+Paperclip.options[:image_magick_path] = "/usr/local/bin"
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.
