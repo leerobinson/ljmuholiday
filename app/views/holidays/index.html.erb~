@@ -3,6 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>LJMU Holiday Request System</title>
+<script type = "text/javascript" src="/public/javascripts/application.js"></script>
+<%= javascript_include_tag 'application' %>
 </head>
 
 <body>
@@ -44,10 +46,10 @@
     </table>
     <br>
     
-	<%= render :partial => @holiday %>
+	
 
 
-<%= will_paginate @holiday, :remote => "true" %>
+<%= will_paginate @holiday, :remote => "true", :class => 'pagination ajax' %>
 
 	
 
