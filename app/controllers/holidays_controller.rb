@@ -2,15 +2,21 @@ class HolidaysController < ApplicationController
   def index
     login_required
     @holiday = Holiday.all
+
+respond_to do |format|
+    format.html
+    format.xml { render:xml => @holiday }
+    format.atom
     
     @holiday = Holiday.all.paginate(:page => params[:page], :per_page => 20)  
 
-	respond_to do |format|
- 	format.html { }
- 	format.js { render :update do |page|
-				page.replace_html 'maincolumn', :partial => @holiday,
-				:locals => {:collection => @holiday} end }
- 	format.xml  { render :xml => @holiday }
+
+	#respond_to do |format|
+ 	#format.html { }
+ 	#format.js { render :update do |page|
+	#			page.replace_html 'maincolumn', :partial => @holiday,
+	#			:locals => {:collection => @holiday} end }
+ 	#format.xml  { render :xml => @holiday }
 end
     
   end
@@ -18,12 +24,6 @@ end
   def show
     login_required
     @holiday = Holiday.find(params[:id])
-    
-    respond_to do |format|
-    format.html
-    format.xml { render:xml => @holiday }
-    format.atom
-    end
     
   end
 

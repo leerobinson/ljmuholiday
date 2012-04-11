@@ -1,26 +1,26 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 
-document.observe("dom:loaded", function() {
-  // the element in which we will observe all clicks and capture
-  // ones originating from pagination links
-  var container = $(document.body)
+var UnobtrusiveLinker = Class.create({ 
 
-  if (container) {
-    var img = new Image
-    img.src = '/images/spinner.gif'
+  initialize: function() {
+    this.options = Object.extend({
+      container: 'container',
+      selector: 'div.pagination a'
+    }, arguments[0] || {});
+    this.initLinks();
+  },  
 
-    function createSpinner() {
-      return new Element('img', { src: img.src, 'class': 'spinner' })
-    }
+  initLinks: function() {
+    $(this.options.container).select(this.options.selector).invoke('observe', 'click', this.linkHandler.bind(this));
+  },  
 
-    container.observe('click', function(e) {
-      var el = e.element()
-      if (el.match('.pagination a')) {
-        el.up('.pagination').insert(createSpinner())
-        new Ajax.Request(el.href, { method: 'get' })
-        e.stop()
-      }
-    })
+  linkHandler: function(event) {
+    event.stop();
+    new Ajax.Updater(this.options.container, event.element().getAttribute('href'),{
+      method: 'get',
+      onComplete: this.initLinks.bind(this)
+    });
   }
-})
+
+});
