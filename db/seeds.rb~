@@ -1,0 +1,20 @@
+require 'faker'
+require 'populator'
+require 'sha1'
+
+Holiday.destroy_all
+h = DateTime.now
+woo = h.strftime("%m/%d/%Y")
+
+l = h + 8
+l = l.strftime("%m/%d/%Y")
+
+User.all.each do |user|
+ Holiday.populate(2) do |holiday|
+  holiday.amountofdays = Integer(8)
+  holiday.startdate = woo
+  holiday.enddate = l
+  holiday.user_id = user.id
+ end
+end
+	
