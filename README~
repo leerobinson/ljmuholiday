@@ -43,7 +43,7 @@ will_paginate (2.3.11)
 
 KEY INFORMATION
 
-Image upload fails to work with seeded records HOWEVER does work with self created records. This is for both when adding a holiday request and editing that holiday request.
+Image upload works for both creating a holiday request and editing that holiday request.
 
 Normal pagination and AJAX pagination work fine. ATOM feed works fine as does User Authentication.
 

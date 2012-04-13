@@ -41,6 +41,9 @@ tzinfo (0.3.32)
 will_paginate (2.3.11)
 
 
+ImageMagick has also been installed, version 6.7.6-5.
+
+
 KEY INFORMATION
 
 Image upload works for both creating a holiday request and editing that holiday request.
