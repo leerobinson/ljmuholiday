@@ -12,7 +12,7 @@ class Holiday < ActiveRecord::Base
                   :url  => "/assets/holidays/:id/:style/:basename.:extension",
                   :path => ":rails_root/public/assets/holidays/:id/:style/:basename.:extension"
 
-validates_attachment_presence :photo
+#validates_attachment_presence :photo
 validates_attachment_size :photo, :less_than => 50.megabytes
 validates_attachment_content_type :photo, :content_type => ['image/jpg', 'image/png']
     
