@@ -1,8 +1,15 @@
-require 'test_helper'
+require File.dirname(__FILE__) + "/../test_helper"
 
 class HolidayTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
-  end
+
+	def create_holiday(attributes = {})
+	
+		attributes[:startdate] ||=	
+		attributes[:enddate] ||=
+		attributes[:amountofdays] ||=
+		attributes[:user_id] ||=
+		holiday = Holiday.new(attributes)
+		holiday
+	end
+  
 end

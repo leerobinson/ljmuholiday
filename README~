@@ -1,10 +1,4 @@
-Lee Robinson - 416495 - Internet and Open Source - Assignment 2 - Basic Ruby on Rails Application for LJMU holiday request system.
-
-This LJMU Holiday Request application allows a user to create, edit, view and delete their own holiday requests. An admin also has the same abilities with the added feature of being able to approve a request. 
-
-One user is unable to edit or delete another's request however they can view it. The admin is unable to create a holiday request. When the admin approves a holiday request the information remains as the holiday request maker's username. The users are unable to try and approve their holiday request and are unable to access it. The only contact they have with the approved section is on show and index when the status of the approved is displayed. Once a holiday request has been approved the ability to edit the holiday request is no longer allowed for both user and admin. The request only has the ability to delete once the approved is true.
-
-Each hyperlink on the application works as expected and there are no dead hyperlinks. Each page has been appropiately named.
+Lee Robinson - 416495 - Internet and Open Source - Assignment 3
 
 Some example details for logging in are written below.
 
@@ -17,18 +11,43 @@ Password: test
 Username: leerobinson
 Password: usualpass
 
-In the work directory of this repository is where the workflow map and database schema's are stored. These include both original Balsamiq files, both PNG files of the mock ups and both PDF's of the mock up. The names of these files are as follows:
+GEM LIST:
 
-Workflow Map Balsamiq - workflowapp.bmml
-Workflow Map PNG - workflowapp.ong
-Workflow Map PDF - leerobinsonljmuholidayworkflowmap.pdf
+actionmailer (2.3.11)
+actionpack (2.3.11)
+activemodel (3.2.3, 3.2.2)
+activerecord (2.3.11)
+activeresource (2.3.11)
+activesupport (3.2.3, 3.2.2, 2.3.11)
+ajaxful_rating (2.2.9)
+arel (3.0.2)
+builder (3.0.0)
+cocaine (0.2.1)
+faker (1.0.1)
+i18n (0.6.0)
+mime-types (1.18)
+multi_json (1.1.0)
+mysql (2.8.1)
+paperclip (2.3.11)
+populator (1.0.0)
+rack (1.1.3)
+rails (2.3.11)
+rake (0.9.0)
+rmagick (2.13.1)
+rubygems-update (1.8.21)
+sqlite3 (1.3.5)
+sqlite3-ruby (1.3.3)
+tzinfo (0.3.32)
+will_paginate (2.3.11)
 
-Database Schema Balsamiq - ljmuholidaydatabaseschema.bmml
-Database Schema PNG - ljmuholidaydatabaseschema.png
-Database Schema PDF - leerobinsonljmuholidaydatabaseschema.pdf
 
-The database schema stores the information about both tables (holidays and users). The holidays table and users table are related through the user_id which is initialized when a user is created.
+KEY INFORMATION
 
-The workflow map shows the navigation and abilities of the users/admin which are possible to them. This will highlight the differences in option the users and admin have in different scenarios using different coloured arrows and highlighting certain areas. For the benefit of the reader the red arrows are actions that all users can do, the green is what the admin will see only, the blue is the users only and the orange is the current user and the admin. 
+Image upload fails to work with seeded records HOWEVER does work with self created records. This is for both when adding a holiday request and editing that holiday request.
 
-Flash messages display on certain events such as new user being created, new holiday request and so on. These are a way of informing the user that an event has occurred rather than having a user wonder if something has happened.
+Normal pagination and AJAX pagination work fine. ATOM feed works fine as does User Authentication.
+
+Tried to implement testing of some sort however had problems with the user authentication implemented meaning there was no access at times.
+
+Attempted to implement a sortable list AJAX feature and a rating feature but failed to do so.
+
