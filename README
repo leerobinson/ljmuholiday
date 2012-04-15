@@ -11,6 +11,8 @@ Password: test
 Username: leerobinson
 Password: usualpass
 
+Majority of other users on application that have created a holiday will have a password that equals password.
+
 GEM LIST:
 
 actionmailer (2.3.11)
